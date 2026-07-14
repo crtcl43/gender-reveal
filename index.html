@@ -663,7 +663,19 @@
     transition:background .18s ease, border-color .18s ease, transform .18s ease;
   }
 
-  .selection-box::after{
+    .selection-box{position:relative;overflow:visible;}
+  .selection-box::before{
+    content:"50";
+    position:absolute;
+    bottom:-24px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:.94rem;
+    font-weight:700;
+    color:#fff;
+  }
+
+.selection-box::after{
     content:"✓";
     font-size:1.35rem;
     font-weight:900;
